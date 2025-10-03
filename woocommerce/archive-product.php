@@ -1,0 +1,233 @@
+<?php
+/**
+ * The Template for displaying product archives, including the main shop page which is a post type archive
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/archive-product.php.
+ *
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @see https://woocommerce.com/document/template-structure/
+ * @package WooCommerce\Templates
+ * @version 8.6.0
+ */
+
+ defined( 'ABSPATH' ) || exit;
+get_header();
+?>
+
+<div class="mainShop secondary">
+
+    <!-- Filtri -->
+
+    <!-- nella categoria di woocommerce 'amari' è presente anche la vodka -->
+
+        <div class="filtersBox primary">
+            <div class="filters">
+                <a href="" class="filter-link active" data-filter="bestseller">Bestseller</a>
+                <a href="" class="filter-link" data-filter="coffee">Caffe'</a>
+                <a href="" class="filter-link" data-filter="gin">Gin</a>
+                <a href="" class="filter-link" data-filter="grappa">Grappe</a>
+                <a href="" class="filter-link" data-filter="liquori">Liquori</a>
+                <a href="" class="filter-link" data-filter="amaro">Amari e altri distillati</a>
+                <!-- <a href="" class="filter-link" data-filter="viniDistillati">Vini e altri Distillati</a> -->
+                <a href="" class="filter-link" data-filter="linea-bar">Linea Bar</a>
+            </div>
+            
+        </div>
+   
+    
+
+    <!-- Sezioni per visualizzare i prodotti -->
+    <div id="productSections">
+        <?php
+        // Prendi il filtro dalla query string, se presente
+        // Prendi il filtro dalla query string, se presente
+        $current_filter = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : '';
+
+// Aggiungi la logica per determinare la query in base al filtro
+$categories = [
+    'bestseller' => '', // The slug here isn't directly used in the new logic for bestseller
+    'gin' => 'gin',
+    'coffee' => 'caffe',
+    'grappa' => 'grappe',
+    'amaro' => 'amari',
+    'liquori' => 'liquori',
+    // 'viniDistillati' => 'vini-distillati',
+    'linea-bar' => 'linea-bar',
+];
+
+// Loop attraverso ciascun filtro e visualizza i prodotti corrispondenti
+foreach ($categories as $filter => $category_slug) :
+    // Se il filtro attivo non corrisponde al filtro corrente, salta la sezione
+    if ($current_filter && $current_filter !== $filter) {
+        continue;
+    }
+
+    // Configura la query in base al filtro attivo
+    $args = [
+        'post_type' => 'product',
+        'posts_per_page' => 10, // Or -1 for all products
+        'orderby' => 'date',
+        'order' => 'DESC',
+    ];
+
+    // Aggiungi il filtro per la categoria specifica o per bestseller
+    if ($filter === 'bestseller') {
+        // For bestseller, query products from 'gin' and 'liquori' categories
+        $args['tax_query'] = [
+            [
+                'taxonomy' => 'product_cat',
+                'field' => 'slug',
+                'terms' => ['gin', 'liquori'], // Include both slugs
+                'operator' => 'IN',
+            ]
+        ];
+        // Optionally, change orderby for bestseller if needed, e.g., sales count
+        // $args['orderby'] = 'meta_value_num';
+        // $args['meta_key'] = 'total_sales';
+    } elseif ($category_slug) {
+        // For other filters with a specified category slug
+        $args['tax_query'] = [
+            [
+                'taxonomy' => 'product_cat',
+                'field' => 'slug',
+                'terms' => $category_slug,
+                'operator' => 'IN',
+            ]
+        ];
+    }
+
+    $loop = new WP_Query($args);
+
+
+    if ($loop->have_posts()) :
+        ?>
+        <div id="<?php echo $filter; ?>Products" class="products-section"  data-filter="<?php echo $filter; ?>">
+            <?php
+            while ($loop->have_posts()) : $loop->the_post();
+                global $product;
+                ?>
+                <div class="product-card">
+                    <a href="<?php the_permalink(); ?>" class="product-link">
+                        <div class="productImage">
+                            
+                            <?php
+                                // Ottieni l'ID dell'immagine principale del prodotto
+                                $image_id = $product->get_image_id();
+                                if ($image_id) {
+                                    $image_url = wp_get_attachment_image_url($image_id, 'full');
+                                    $alt_text = get_post_meta($image_id, '_wp_attachment_image_alt', true); 
+                                ?>
+                                    <img  loading="lazy" src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr($alt_text); ?>" class="mainProductImage">
+                                <?php } 
+                            ?>
+
+                            
+
+                        <!-- Sezione immagini ACF -->
+                            <div class="acf-images">
+                                <?php 
+                                $dettaglio_1_davanti = get_field('dettaglio_1_davanti', $product->get_id()); 
+                                $dettaglio_2_davanti = get_field('dettaglio_2_davanti', $product->get_id()); 
+                                $dettaglio_2_dietro = get_field('dettaglio_2_dietro', $product->get_id()); 
+
+                                if ($dettaglio_1_davanti) : ?>
+                                    <img loading="lazy" src="<?php echo esc_url($dettaglio_1_davanti['url']); ?>" alt="<?php echo esc_attr($dettaglio_1_davanti['alt']); ?>" class="Dettaglio1 appari">
+                                <?php endif;
+
+                                if ($dettaglio_2_davanti) : ?>
+                                    <img loading="lazy" src="<?php echo esc_url($dettaglio_2_davanti['url']); ?>" alt="<?php echo esc_attr($dettaglio_2_davanti['alt']); ?>" class="Dettaglio2 appari">
+                                <?php endif;
+
+                                if ($dettaglio_2_dietro) : ?>
+                                    <img  loading="lazy" src="<?php echo esc_url($dettaglio_2_dietro['url']); ?>" alt="<?php echo esc_attr($dettaglio_2_dietro['alt']); ?>" class="Dettaglio2Dietro appari">
+                                <?php endif; ?>
+                            </div>
+                        <!-- Fine sezione immagini ACF -->
+
+
+
+
+
+                        </div>
+                        <div class="productInfo">
+                            <h2 class="product-title"><?php the_title(); ?></h2>
+                        </div>
+                    </a>
+                </div>
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+        </div>
+
+       
+        <?php
+    endif;
+endforeach;
+?>
+
+
+    </div>
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    let currentFilter = urlParams.get('filter') || 'bestseller';
+
+    function updateProductsView(filter) {
+        document.querySelectorAll('.filter-link').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('data-filter') === filter) {
+                link.classList.add('active');
+            }
+        });
+
+        // Esegui la richiesta AJAX per ottenere i nuovi prodotti
+        fetchProducts(filter);
+    }
+
+    function fetchProducts(filter) {
+        const productsContainer = document.getElementById('productSections');
+        productsContainer.innerHTML = '<div class="divLoader"><p>Caricamento...</p></div>'; // Mostra un loader
+
+        fetch('<?php echo admin_url('admin-ajax.php'); ?>?action=filter_products&filter=' + filter)
+            .then(response => response.text())
+            .then(data => {
+                productsContainer.innerHTML = data; // Sostituisci il contenuto con i nuovi prodotti
+            })
+            .catch(error => {
+                console.error("Errore nel caricamento dei prodotti:", error);
+                productsContainer.innerHTML = '<p>Errore nel caricamento dei prodotti.</p>';
+            });
+    }
+
+    // Esegui subito l'aggiornamento con il filtro attuale
+    updateProductsView(currentFilter);
+
+    // Aggiungi gestione per il click sui filtri
+    document.querySelectorAll('.filter-link').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const filter = link.getAttribute('data-filter');
+            history.pushState({ filter }, '', '?filter=' + filter);
+            updateProductsView(filter);
+        });
+    });
+
+    window.addEventListener('popstate', function(event) {
+        const filter = event.state ? event.state.filter : 'bestseller';
+        updateProductsView(filter);
+    });
+});
+
+
+
+</script>
+
+<?php
+get_footer();

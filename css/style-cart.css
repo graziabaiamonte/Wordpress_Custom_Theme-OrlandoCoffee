@@ -1,0 +1,254 @@
+
+.cart-empty.woocommerce-info{
+    background-color: transparent;
+    border:none;
+    font-family: "Raleway", serif;
+}
+
+.cart-empty.woocommerce-info::before{
+    display: none;
+}
+
+
+.cart_count_header {
+    font-family: "Raleway", serif !important;
+}
+
+
+/* --------------------- page cart ------------------------*/
+
+.mainCart {
+    width: 100%;
+    height: 40vh;
+ 
+}
+
+.wc-block-components-product-name {
+    font-family: "Raleway", serif !important;
+    color: var(--grigioScuro);
+    font-weight: 300;
+}
+
+.wc-block-components-totals-wrapper {
+    font-family: "Raleway", serif !important;
+    color: var(--grigioScuro);
+}
+
+.wc-block-components-product-metadata__description {
+    display: none;
+}
+
+.wc-block-cart-item__remove-link {
+    font-family: "Raleway", serif !important;
+    letter-spacing: 1px;
+    text-underline-offset: 0.5em;
+}
+
+.wc-block-components-button.wp-element-button.wc-block-cart__submit-button.contained {
+    color: var(--crema);
+    font-size: 1em;
+    text-transform: uppercase;
+    font-family: "Raleway", serif;
+    background-color: var(--grigioScuro);
+    border: 1px solid var(--grigioScuro);
+    transition: all 0.3s ease-in-out;
+    padding: 2%;
+}
+
+.wc-block-components-button.wp-element-button.wc-block-cart__submit-button.contained:hover {
+    background-color: var(--crema);
+    color: var(--grigioScuro);
+}
+
+.wc-block-components-quantity-selector {
+    border-radius: 0px !important;
+}
+
+
+.wc-block-components-quantity-selector input.wc-block-components-quantity-selector__input {
+    font-family: "Raleway", serif;
+}
+
+.wc-block-components-quantity-selector>.wc-block-components-quantity-selector__button--plus{
+    border-radius: 0px !important;
+} 
+
+.wc-block-components-quantity-selector>.wc-block-components-quantity-selector__button--minus {
+    border-radius: 0px !important;
+}
+
+
+.wc-block-cart-items__header{
+    font-family: "Raleway", serif;
+}
+
+.wp-block-woocommerce-cart-order-summary-heading-block.wc-block-cart__totals-title{
+    font-family: "Raleway", serif !important;
+}
+
+.wc-block-components-quantity-selector:after {
+    border-radius: 0px;
+} 
+
+
+
+.wc-block-components-radio-control .wc-block-components-radio-control__input {
+    appearance: auto !important;
+}
+
+.woocommerce .woocommerce-customer-details address {
+    border: none !important;
+}
+
+.woocommerce .woocommerce-customer-details address {
+    border: none !important;
+}
+
+/* --------- page cart empty -------------------- */
+
+.wp-block-heading.has-text-align-center.with-empty-cart-icon.wc-block-cart__empty-cart__title {
+    font-family: "Raleway", serif;
+    letter-spacing: 1px;
+}
+
+.wc-block-cart__empty-cart__title.with-empty-cart-icon:before {
+    display: none !important;
+}
+
+.wp-block-woocommerce-empty-cart-block {
+    margin-top: 10% !important;
+}
+
+.wc-block-grid__product-title {
+    font-family: "Raleway", serif !important;
+    letter-spacing: 1px;
+    color: var(--grigioScuro) !important;
+}
+
+
+.wp-block-button.wc-block-grid__product-add-to-cart a{
+    border-radius: 0px !important;
+    background-color: var(--grigioScuro);
+    color: var(--crema);
+    border: 1px solid var(--grigioScuro);
+    font-family: "Raleway", serif !important;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.wp-block-button.wc-block-grid__product-add-to-cart a:hover {
+    background-color: var(--crema);
+    color: var(--grigioScuro);
+}
+
+.wp-block-heading.has-text-align-center {
+    font-family: "Raleway", serif !important;
+}
+
+.wc-block-grid__product-image {
+    height: 300px !important;
+}
+
+.woocommerce-mini-cart__total.total {
+    margin-top: 15% !important;
+    margin-bottom: 5% !important;
+  }
+  
+  .woocommerce-mini-cart__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .woocommerce-mini-cart-item .mini_cart_item  a {
+    color: var(--grigioScuro) !important;
+  }
+  
+  .woocommerce-mini-cart-item .mini_cart_item{
+    color: var(--grigioScuro) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .woocommerce-mini-cart.cart_list.product_list_widget a {
+    color: var(--grigioScuro) !important;
+  }
+  
+  .remove.remove_from_cart_button {
+    color: var(--grigioScuro) !important;
+  }
+
+  .woocommerce-mini-cart.cart_list.product_list_widget a{
+    color: var(--grigioScuro) !important;
+  }
+
+  
+ .woocommerce .remove.remove_from_cart_button {
+    color: var(--grigioScuro) !important;
+  }
+
+  .woocommerce-mini-cart-item.mini_cart_item a:visited {
+    color: var(--grigioScuro) !important;
+  }
+
+  .woocommerce-mini-cart-item.mini_cart_item a {
+    color: var(--grigioScuro) !important;
+  }
+
+
+  .woocommerce-mini-cart-item.mini_cart_item a:hover {
+    color: var(--active) !important;
+  }
+
+  .woocommerce-mini-cart-item.mini_cart_item {
+    list-style: none !important; 
+  }
+
+  .woocommerce-mini-cart.cart_list.product_list_widget{
+    list-style: none !important; 
+  }
+
+  .woocommerce ul.cart_list li a, .woocommerce ul.product_list_widget li a {
+    font-weight: 300 !important;
+  }
+
+
+.woocommerce ul.cart_list li {
+    display: flex;
+    align-items: center;
+}
+
+
+  .woocommerce ul.cart_list li a {
+    display: flex;
+    align-items: center;
+  }
+
+  .woocommerce ul.cart_list li img{
+    width: 80px;
+    height: 80px;
+  }
+
+  .woocommerce a.remove {
+    font-size: 1em;
+  }
+  .woocommerce a.remove:hover {
+    color: var(--active) !important;
+    background-color: transparent !important;
+  }
+
+  .woocommerce-mini-cart.cart_list.product_list_widget a {
+    color: var(--grigioScuro)  !important;
+  }
+			
+  .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.added::after {
+    display: none !important;
+  }
+	
+.woocommerce a.added_to_cart {
+  display: none !important;
+}
+  
+
+

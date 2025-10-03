@@ -1,0 +1,276 @@
+.mainShop{
+    min-height: 100vh;
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    background-color: var(--crema);
+    padding-top: 10%;
+}
+
+.heroShop{
+    height: 40vh;
+    width: 100vw;
+    background-color: var(--crema);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.heroShop h1{
+    color: var(--grigioScuro);
+}
+
+.filters{
+    width: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5%;
+    text-transform: uppercase;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    gap: 15px;
+}
+
+.filtersBox{
+    width: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5%;
+    text-transform: uppercase;
+    position: absolute;
+    top: 15%;
+    left: 0;
+}
+
+.filter-link {
+    color: var(--active);
+    transition: all 0.3s ease-in-out;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.filter-link:hover{
+    color: var(--grigioScuro);
+}
+
+.filter-link.active {
+    color: var(--grigioScuro);  
+}
+
+#productSections{
+    width: 80vw;
+    display: flex;
+    gap:60px;
+    flex-wrap: wrap;
+    margin-left: 40vh;
+    margin-bottom: 10%;
+}
+
+#bestsellerProducts,
+#coffeProducts,
+#ginProducts,
+#grappaProducts,
+#amaroProducts,
+#liquoriProducts{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+}
+
+.product-link{
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+    align-items: center;
+}
+
+.price{
+    font-family: "Raleway", serif;
+    color: var(--grigioScuro);
+}
+
+.product-title {
+    font-family: "Raleway", serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--grigioScuro) !important;
+    text-align: center;
+    text-transform: capitalize !important;
+    text-wrap: balance;
+    max-width: 350px !important;
+}
+
+
+.product-link  .product-title{
+    text-transform: capitalize !important;
+    text-wrap: balance;
+    max-width: 350px !important;
+}
+
+.productImage{
+    height: 300px;
+    width: 300px;
+    transition: all 0.3s ease-in;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.mainProductImage{
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    z-index: 3;
+    transition: all 0.3s ease-in;
+}
+
+
+
+.productImage:hover .mainProductImage{
+    transform: scale(1.1);
+}
+
+.product-add-to-cart{
+    font-family: "Raleway", serif;
+    background-color: transparent !important;
+    transition: all 0.3s ease-in-out;
+    padding-top:5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 30%;
+    border: none  !important;
+}
+
+.product-add-to-cart:hover{
+    background-color: var(--grigioScuro);
+    color: var(--grigioChiaro);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+.product-card{
+    /* opacity: 0; */
+    transform: scale(0.8); 
+    transition: all 0.3s ease;
+    will-change: transform, opacity;
+    max-width: 600px;
+}
+
+.product-card.visible {
+    transform: scale(1); /* Scala finale */
+    opacity: 1; /* Visibile */
+}
+
+.product-card .dettaglio1 {
+    opacity: 0;
+    position: absolute; 
+    bottom: 0;
+    right: 0;
+    width:200px;
+    z-index:4; 
+    transform: translateX(-20px);
+    transition: all 0.3s ease-in-out;
+}
+
+.product-card:hover .dettaglio1 {
+    opacity: 1;
+    transform: translateX(0); 
+}
+
+
+
+.stock.in-stock {
+    display: none !important;
+}
+
+.woocommerce-variation-availability {
+    display: none !important;
+}
+
+/* Loader */
+.loader {
+    width: 48px;
+    height: 48px;
+    display: inline-block;
+    position: relative;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--active);
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: animloader 2s linear infinite;
+  }
+  .loader::after {
+    animation-delay: 1s;
+  }
+  
+  @keyframes animloader {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+.divLoader {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* fine loader */
+
+
+
+
+
+
+
+/* ---- animazione di fade per i dettagli ------*/
+@keyframes scaleUp {
+    0% {
+        transform: scale(0) rotate(15deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
+}
+
+
+.appariShop {
+    animation: scaleUp 1s ease-out;
+}
+/* -------------------------------------------- */
+
+
+
+
+
+@media only screen and (min-width:1920px) {
+    .filter-link {
+        font-size: 2.5em;
+    }
+}

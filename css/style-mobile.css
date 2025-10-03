@@ -1,0 +1,929 @@
+/* / */
+
+@media only screen and (max-width:768px){
+    .cartIcon{
+      height: 30px;
+    }
+  
+    #header {
+      width:100vw !important;
+    }
+  
+    .mobileIconCart {
+      display: inline;
+      width: 45px;
+      margin-top: 2%;
+    }
+  
+    .listaMenu {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .badgeItemCart {
+      font-size:12px;
+      padding: 5%;
+    }
+  
+    .hamburgerMenu {
+      padding-right: 0px;
+    }
+  
+    .mobileIconCart  ul{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    .hamburgerMenu svg {
+      height: 37px;
+    }
+  
+    .popup-menu ul li a {
+      font-size: 24px;
+    }
+  
+    .footerMain{
+     padding-top: 15% !important;
+     height: auto;
+    }
+  
+    .testoFooter{
+      flex-direction: column;
+    }
+  
+    .testoFooter div{
+      width: 100%;
+      text-align: center;
+      padding-top: 0;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .testoFooter p{
+      width: 90%;
+    }
+  
+    .logoFooter {
+      bottom: -3%;
+      width: 100%;
+      height: 15% !important;
+    }
+  
+    .boxSocial {
+      flex-direction: row !important;
+    } 
+  
+    .boxSocial p {
+      width: auto;
+    }
+  
+    .credit {
+      padding-bottom: 15%;
+    }
+  
+    .widthSameButton {
+      display: none;
+    }
+  
+    .svgLogo {
+      margin-top: -10%;
+      stroke-width: 5px;
+      height: 100px !important;
+  width: 100% !important;
+    }
+    .menuDestra {
+      margin-top: -2%;
+    }
+  
+    .entry-header .entry-title{
+      font-size: 2em;
+      margin-top: 15%;
+    }
+  
+    .entry-content {
+      margin-bottom: 5%;
+    }
+  
+    .woocommerce form .form-row{
+      width: 100%;
+    } 
+  
+    .footerNumber {
+      display: flex;
+      gap: 5px;
+      flex-direction: row !important;
+    }
+  
+    ul.listaMenu {
+      padding: 0 !important;
+    }
+  
+    .Dettaglio2Dietro {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1 !important;
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: contain !important; 
+    }
+  }
+
+
+/* ACCOUNT */
+@media only screen and (max-width:768px){
+    .woocommerce-MyAccount-navigation ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 0.8rem;
+        width: 100%;
+        padding-left: 20%;
+        padding-right: 20%;
+        position: absolute !important;
+        background-color: var(--crema);
+        top: 5%;
+      
+    }
+
+    .woocommerce-account .woocommerce-MyAccount-content {
+        width: 100%;
+    }
+
+    .woocommerce-MyAccount-content{
+        margin-left: 0 !important;
+        margin-top: 10%;
+    }
+
+    .woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea{
+        border: none;
+        padding: 3% !important;
+    } 
+    
+}
+
+/* CART */
+@media only screen and (max-width:768px){
+    .wp-block-woocommerce-empty-cart-block {
+        margin-top: 30% !important;
+    }
+
+    .wc-block-components-sidebar-layout.wc-block-cart.wp-block-woocommerce-filled-cart-block.is-mobile{
+        width: 90%;
+    }
+
+    .wc-block-cart-items__row {
+        width: 85vw;
+    }
+
+    .wc-block-components-sidebar.wc-block-cart__sidebar.wp-block-woocommerce-cart-totals-block {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 15%;
+    }
+
+    .wc-block-components-main.wc-block-cart__main.wp-block-woocommerce-cart-items-block {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .popupCart {
+      width: 80%;
+    }
+
+    .woocommerce-columns.woocommerce-columns--2.woocommerce-columns--addresses.col2-set.addresses{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+/* CONTATTI */
+@media only screen and (max-width:768px) {
+    .mainContatti {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5% 0 5% 0 ;
+        gap: 50px;
+    }
+
+    .boxSinistra {
+        width: 90%;
+        gap:45px;
+    }
+    .wpcf7-form-control.wpcf7-submit {
+        padding: 2% 4% 2% 4%;
+    }
+
+    .boxSinistra h3 {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .boxSinistra a {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .boxSocial {
+        justify-content: center;
+    }
+
+    .iconSocial {
+        width: 34px;
+    }
+
+    .boxDestra {
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+        gap:45px;
+    }
+
+    .boxDestra h1 {
+        text-align: center;
+    }
+
+    .wpcf7-form textarea {
+        width: 95%;
+    }
+
+    .wpcf7-form input {
+        width: 95%;
+    }
+
+    .wpcf7-form input[type="checkbox"]  {
+        width: auto;
+    }
+
+    .wpcf7-form {
+        justify-content: center;
+        align-items: center;
+    }
+
+.wpcf7 form.sent .wpcf7-response-output {
+    border-color : var(--active) !important;
+    width: 100% !important;
+}
+
+}
+
+
+/* FRANC */
+
+@media only screen and (max-width:768px){
+    .boxFotoFranc{
+        height: 85vh;
+    }
+
+    .boxHero h1 {
+        padding-top: 5%;
+    }
+
+    .boxDescrizione {
+        flex-direction: column;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .boxTestoDescrizione {
+        width: 90%;
+        gap: 10px;
+    }
+
+    .boxTestoDescrizione p {
+        width: 100%;
+        text-align: right;
+    }
+
+    .boxTestoDescrizione h2{
+        width: 95%;
+        text-align: right;
+    }
+
+    .boxFotoDescrizione {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 3%;
+    }
+
+    .boxDescrizioneOffre {
+        flex-direction: column;
+    }
+
+    .boxFotoDescrizioneOffre {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 3%;
+        height: 40vh;
+    }
+
+    .imgHeroFranc.packTransparent {
+        height: 50vh !important;
+        width: 100% !important;
+        object-fit: contain !important;
+    }
+
+    .boxSecondoTestoFranc p{
+        width: 95%;
+    }
+
+    .boxSecondoTestoFranc h2{
+        width: 95%;
+    }
+
+
+    .boxTestoDescrizioneOffre{
+        width: 90%;
+        gap:10px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .boxTestoDescrizioneRivolto{
+        width: 90%;
+        gap:10px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    .boxTestoDescrizioneRivolto p {
+        width: 100% !important;
+    }
+}
+
+/* HOME */
+@media only screen and (max-width:768px){
+    #slice  {
+        height: 80vh;
+    }
+/* 
+    .section-coffee{
+        overflow-x: hidden !important;
+    } */
+
+    .desktopHero {
+        display: none;
+    }
+
+    .mobileHero {
+        display: block;
+        height: 100vh;
+        position: relative;
+        z-index: 8;
+    }
+
+    .mobileHero img {
+        height: 100%;
+        width: 100%;
+        object-fit:cover ;
+    }
+
+    .mobileHero video {
+        height: 100%;
+        width: 100%;
+        object-fit:cover ;
+    }
+
+    #slice div {
+        background-size: cover !important;
+    }
+
+    h1{
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    canvas{
+        left: 0;
+    }
+
+    .second-section{
+        flex-direction: column;
+        padding: 45% 5% 5% 5%;
+    }
+
+
+
+    .testoHeroDark{
+        width: 75% !important;
+        font-size: 2rem !important;
+    }
+    
+    .testoHeroMobileLight {
+        color: var(--crema) !important;
+    text-wrap: balance;
+    width: 75%;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-transform: uppercase !important;
+    font-size: 3rem !important;
+    text-align: center !important;
+    font-size: 2rem !important;
+    }
+
+    #three-container canvas {
+        left: 0 !important;
+    }
+
+    .pack {
+        position: static;
+    }
+
+    .chicco.one {
+        width: 60px;
+        top:-5%;
+    }
+
+    .chcicco.five{
+        width: 60px;
+    }
+
+    .chcicco.four{
+        width: 60px;
+    }
+
+    .chicco.six {
+        width: 60px;
+        height: 60px;
+    }
+
+    .chicco.eight {
+        width: 50px;
+    }
+
+    .chicco.nine{
+        width: 50px;
+        right: 70%;
+    } 
+
+    .primoTesto, .secondoTesto, .pack{
+        width: 95%;
+    }
+
+    .primoTesto h3 {
+        font-size: 1.3rem;
+        text-align: left;
+        margin-bottom: 5%;
+        width: 95%;
+    }
+
+    .secondoTesto h2 {
+        font-size: 1.3rem;
+    }
+
+    .secondoTesto {
+        padding-left: 0% !important;
+    }
+
+    .section-grappa{
+        flex-direction: column-reverse;
+        height: 100vh !important;
+        overflow: visible;
+    }
+
+    .testoGrappa{
+        width: 95%;
+    }
+
+    .testoGrappa h2{
+        width: 90%;
+    }
+
+    .testoGrappa p {
+        width: 90%;
+    }
+
+    .bollino{
+        width: 40px;
+    }
+    .grappaBianca{
+        height: 40vh;
+        position: absolute;
+        top: -15%;
+        left: 0;
+    }
+
+    .grappaNera {
+        height: 30vh;
+        top: 0;
+    }
+
+    .section-gin{
+        flex-direction: column-reverse;
+        margin-bottom: 0;
+      
+        overflow-y: visible;
+    }
+
+    .testoGin{
+        width: 95%;
+        padding-left: 5%;
+    }
+
+    .testoGin p {
+        width: 95%;
+    }
+    
+    #mainTestoGin{
+        font-size: 1.8rem;
+        width: 95%;
+    }
+
+    #ginOriginal {
+        /* height: 30vh;
+        top: -40%; */
+        display: none;
+    }
+    #ginLimone{
+        /* height: 30vh;
+        top:-40%; */
+        display: none;
+    }
+
+    #ginPompelmo {
+        margin-left: -30%;
+        height: 40vh;
+        margin-top: -25vh;
+    }
+
+    .section-amaro {
+        height: 70vh;
+    }
+
+    .testoAmaro {
+        width: 100%;
+    }
+
+    .testoAmaro h2{
+        width: 95%;
+    }
+
+    .testoAmaro p {
+        width: 95%;
+    }
+
+    .amaro{
+        display: none;
+    }
+
+    .amaroMobile{
+        display: block;
+    }
+
+    .section-liquori {
+        position: relative;
+        height: auto;
+    }
+
+    .testoLiquori{
+        width: 100%;
+    }
+
+    .testoLiquori p {
+        width: 90%;
+    }
+
+    #mainTestoLiquori{
+        width: 90%;
+    }
+
+    #secondTestoLiquori{
+        width: 95%;
+    }
+
+    .boxSingol{
+        width: 160px;
+        height: 200px;
+    }
+
+    .slider-btn {
+        display: block; /* Mostra i pulsanti solo su mobile */
+      }
+
+      .slider {
+        display: flex;
+
+ 
+        overflow-x: auto !important; /* Abilita lo scorrimento orizzontale */
+        /* scroll-snap-type: x mandatory;  */
+        scrollbar-width: none; /* Nasconde la scrollbar su Firefox */
+        -ms-overflow-style: none; /* Nasconde la scrollbar su IE e Edge */
+        /* scroll-behavior: smooth;  */
+        gap: 0; /* Rimuovi il gap per avere un elemento alla volta */
+        padding: 0; /* Elimina padding per allineare gli elementi */
+      
+    }
+
+ 
+
+    .slider::-webkit-scrollbar {
+        display: none; /* Nasconde la scrollbar su Chrome e Safari */
+      }
+   
+      .boxSingleAmaro {
+        flex: 0 0 100%; /* Ogni elemento occupa il 100% della larghezza dello slider */
+        scroll-snap-align: center; /* Centra l'elemento quando è fermo */
+        display: flex;
+        align-items:center;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 50vh;
+        padding-bottom: 20%;
+    }
+
+      .bottleLiquore {
+        width: 70vw;
+        position:  static !important;
+        margin-bottom: -5%;
+      }
+
+      .section-franc {
+        flex-direction: column-reverse;
+      }
+
+      .testoBox {
+        width: 95%;
+        padding-left: 5%
+      }
+
+      .testoBox h2 {
+        width: 70%;
+      }
+
+      .testoBox p {
+        width: 90%;
+      }
+
+
+      .slider-dots {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom:3%;
+      }
+      
+      .slider-dots button {
+        width: 6px;
+        height:3px;
+        margin: 0 5px;
+        border: none;
+        background-color: var(--active);
+        cursor: pointer;
+      }
+      
+      .slider-dots button.active {
+        background-color: var(--grigioScuro);
+      }
+
+      .section-franc {
+        margin-top: 45%;
+      }
+
+
+      .fotoPack {
+        height: 60vh;
+        width: 100%;
+        z-index: 2 !important;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .fotoPack img {
+        height: 100%;
+        width: 100% !important;
+        object-fit: contain;
+        position: relative !important;
+    }
+      
+
+      
+ }
+
+
+
+
+
+/* SHOP */
+@media only screen and (max-width:768px){
+    .filters{
+        flex-wrap: wrap;
+        flex-direction: row;
+        font-size: .5em;
+        width: 80%;
+        gap:20px;
+        padding: 0;
+        position: relative;
+        margin-top: -10%;
+    }
+
+    .filtersBox{
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+    }
+
+    #productSections{
+        margin-left: 0;
+        width: 100%;
+        margin-top: 25vh;
+        justify-content: center;
+        overflow-x: hidden !important;
+    }
+
+
+    #bestsellerProducts, #coffeProducts, #ginProducts, #grappaProducts, #amaroProducts, #liquoriProducts {
+        gap: 60px;
+    }
+
+    .product-card {
+        width: 150px;
+    }
+
+
+    .product-title{
+        font-size: 0.8em;
+    }
+
+    .product-link{
+        align-items: center;
+    }
+
+    .woocommerce-variation-add-to-cart.variations_button.woocommerce-variation-add-to-cart-disabled {
+        margin-bottom: 5%;
+    }
+}
+
+
+
+/* SINGLE-PRODUCT */
+@media only screen and (max-width:768px){
+    .heroProduct{
+        flex-direction: column;
+    }
+   
+    .mobile {
+        display:flex;
+        flex-direction: column;
+        gap: 15px;
+        background-color: var(--crema);
+    }
+
+    .desktop{
+        display: none;
+    }
+   
+    .product-info{
+        width: 90%;
+    }
+
+    .productTitle{
+        width: 100%;
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .boxFotoMain{
+        height: auto;
+        width: 100%;
+    }
+
+    .boxFotoMain img {
+        object-fit: cover;
+        height: 60vh;
+        width: 100%;
+    }
+
+    .product-hero {
+        overflow-x: hidden;
+    }
+    .related-products-grid{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow:hidden;
+    }
+
+    .product-description{
+        width: 80vw;
+        height: 80vh;
+    }
+
+    .heroProductMobile {
+        background-color: var(--crema);
+        min-height: 90vh;
+    }
+
+    .boxTitleMobile {
+        margin-top: 15% !important;
+        width: 100%;
+      
+    }
+
+    .mainFotoMobile{
+        width: auto;
+        height: 90% !important;
+        object-fit: contain;
+        position: relative;
+        z-index: 3;
+    }
+
+    .product-descriptionMobile{
+        width: 130vw;
+        height: 60vh;
+        position: absolute;
+        border-radius: 50%;
+        bottom: 8%;
+        left: -50%;
+    }
+
+    .descriptionTextMobile p {
+        width: 95%;
+    }
+
+    .product-infoMobile {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 2;
+        margin-top: -2px;
+    }
+
+    .productPriceMobile{
+        font-family: "Raleway", serif;
+        font-size: 30px;
+    }
+
+    .single_add_to_cart_buttonMobile {
+        font-family: "Raleway", serif;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 14px !important;
+    }
+
+    .cartButtonMobile button{
+        background-color: transparent !important;
+        color: var(--grigioScuro) !important;
+        width: max-content;
+        border-radius: 0px !important;
+        padding-bottom: 5px !important;
+        padding-top: 5px !important;
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+        border-bottom: 2px solid var(--grigioScuro) !important;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .cartButtonMobile button:hover{
+        background-color: var(--grigioScuro) !important;
+        color: var(--grigioChiaro) !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    
+ 
+
+    .related-product-card{
+        height: 300px;
+        
+    }
+
+    .related-product-card a {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .related-product-image {
+        height: 250px;
+    }
+
+    .titoloRelated {
+        font-size: 1.1em;
+        margin: 0;
+        width: 50%;
+    }
+
+    .prodottiRelated {
+        margin-top: -2px;
+    }
+
+   
+
+
+   
+
+    
+
+    
+}

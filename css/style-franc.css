@@ -1,0 +1,168 @@
+.boxHero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxHero h1 {
+padding: 2% 0 0 0 ;
+margin: 0;
+}
+
+.boxSecondoTestoFranc {
+    width: 90%;
+    padding: 1% 10% 2% 10%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--grigioScuro);
+}
+
+.boxSecondoTestoFranc h2 {
+    width: 30%;
+    text-align: center;
+}
+
+.boxSecondoTestoFranc p {
+    width: 30%;
+    text-align: center;
+}
+
+
+.mainFranc{
+    min-height: 100vh;
+    background-color: var(--crema);
+}
+
+.boxFotoFranc {
+    height: 80vh;
+    width: 100%;
+}
+
+.imgHeroFranc {
+    height: 100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.boxDescrizione{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap:5%;
+    flex-direction: row-reverse;
+}
+
+.boxFotoDescrizione {
+    width: 50%;
+    padding-right: 5%;
+}
+
+.boxTestoDescrizione {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: end;
+    justify-content: end;
+    text-align: right;
+    color: var(--grigioScuro);
+}
+
+.boxTestoDescrizione h2 {
+    width: 50%;
+}
+
+.boxTestoDescrizione p {
+    width: 50%;
+}
+
+.boxDescrizioneOffre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5%;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.imgHeroFranc.packTransparent {
+    width: 80vw !important;
+    height: 100% !important;
+    object-fit: contain !important;
+}
+.boxFotoDescrizioneOffre {
+    width: 50%;
+    padding-left: 5%;
+}
+
+.boxTestoDescrizioneOffre {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: start;
+    justify-content:start;
+    color: var(--grigioScuro);
+}
+
+.boxTestoDescrizioneRivolto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: start;
+    justify-content:start;
+    color: var(--grigioScuro);
+}
+
+.boxTestoDescrizioneRivolto p{
+    width: 50% !important;
+}
+
+.boxTestoDescrizioneOffre p {
+    width: 50%;
+}
+
+.boxTestoDescrizioneOffre h2 {
+    width: 50%;
+}
+
+li span {
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+
+.boxTestoDescrizioneOffre ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    padding:0;
+}
+
+.boxTestoDescrizioneOffre li {
+    display: flex;
+    flex-direction: column;
+}
+
+.boxTestoDescrizioneOffre li p {
+    margin-left: 35px !important; 
+}
+
+li img {
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+.ultima{
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+

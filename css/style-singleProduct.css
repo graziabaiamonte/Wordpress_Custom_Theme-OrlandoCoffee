@@ -1,0 +1,353 @@
+.mainSingleProduct{
+    width: 100%;
+   
+    gap:80px;
+    background-color: var(--bianco);
+}
+
+.heroProduct{
+    width: 100vw;
+    display: flex;
+    background-color: var(--crema);
+    align-items: center;
+    justify-content: center;
+}
+
+.product-hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-section {
+    display: none;
+}
+
+.products-section:first-of-type {
+    display: flex;
+}
+
+
+
+.product-info {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 25px;
+    margin-right: 5%;
+    z-index: 44;
+}
+
+.productTitle{
+    font-size: 3em;
+    text-align: start;
+    margin: 0;
+    width: 80%;
+}
+
+.descriptionText {
+    font-size: 16px;
+
+}
+
+.product-description{
+    width: 90vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    background-color: var(--grigioScuro);
+    border-radius: 50%;
+    margin-top: -5%;
+    margin-left: -5%;
+    justify-content: center;
+    align-items: end;
+}
+
+.boxFotoMain{
+    height: 100vh;
+    width: 70vw;
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 1;
+}
+
+.boxFotoMain img {
+    height: 100%;
+    object-fit: contain;
+    width:100%;
+}
+
+.mainFoto{
+    z-index: 3;
+}
+
+.Dettaglio1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5 !important;
+    height: 100% !important;
+}
+
+.Dettaglio2{
+    position: absolute;
+    z-index: 2 !important;
+    height: 100% !important;
+    top: 0;
+    left: 0;
+}
+
+.Dettaglio2Dietro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1 !important;
+    height: 100% !important;
+    width: 100% !important;
+    object-fit: contain !important; 
+}
+
+.appari {
+    transform: scale(0) ;
+    opacity: 0;
+}
+
+
+.productPrice{
+    font-family: "Raleway", serif;
+    font-size: 30px;
+}
+
+
+.single_add_to_cart_button {
+    font-family: "Raleway", serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 14px !important;
+}
+.cart{
+    display: flex;
+    gap:40px;
+   
+}
+
+form input {
+    border-radius: 0px;
+    padding: 10%;
+}
+
+.woocommerce .quantity .qty {
+    border: 1px solid var(--grigioScuro)
+}
+
+ .cartButton button{
+    background-color: transparent !important;
+    color: var(--grigioScuro) !important;
+    width: 100%;
+    border-radius: 0px !important;
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    border-bottom: 2px solid var(--grigioScuro) !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.cartButton button:hover{
+    background-color: var(--grigioScuro) !important;
+    color: var(--grigioChiaro) !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+}
+
+a.reset_variations {
+    color: var(--active);
+    margin-left: 5px;
+}
+
+/* .quantity input {
+    padding: 1% !important;
+} */
+
+.woocommerce-variation-add-to-cart.variations_button.woocommerce-variation-add-to-cart-disabled {
+    display: flex;
+    gap:45px;
+}
+
+.woocommerce-variation-add-to-cart.variations_button.woocommerce-variation-add-to-cart-enabled {
+    display: flex;
+    gap:45px;
+}
+
+.woocommerce-variation-price {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+
+.variations tr {
+    display: flex;
+    gap:5px;
+    font-family: "Raleway", serif;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+select#formato{
+    border-radius: 0px;
+    border: 1px solid var(--grigioScuro);
+}
+ 
+.related-products-grid {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+}
+
+.prodottiRelated{
+    padding-bottom: 10%;
+    padding-top: 5%;
+    background-color: var(--crema);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 4;
+}
+
+.prodottiRelated h4{
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.titoloRelated {
+    text-align: center;
+    color: var(--grigioScuro);
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: -5%;
+}
+
+.related-product-card{
+    width: 500px;
+}
+
+.related-product-image{
+    width: 500px;
+    height: 500px;
+    transition: all 0.3s ease-in;
+    position: relative;
+    z-index: 3;
+}
+
+.related-product-image img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+    z-index: 3;
+    transition: all 0.3s ease-in;
+}
+
+.related-product-image:hover img {
+    transform: scale(1.1) ;
+}
+
+
+.descrizioneProduct{
+    width: 100%;
+    /* background-color: var(--crema); */
+    position: absolute;
+}
+
+.mainTestoDescription {
+    width: 80%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    color: var(--crema);
+    margin-top: -10%;
+    gap: 10px;
+    padding-right: 5%;
+} 
+
+.descrizioneProduct h2 {
+    color: var(--crema);
+}
+
+
+.woocommerce-message{
+    width: 100%;
+    height:100px;
+    background-color: var(--active);
+    color: var(--grigioScuro)
+}
+
+.woocommerce-message .button {
+    background-color: var(--grigioScuro) !important;
+    color: var(--crema) !important;
+}
+
+.woocommerce-message .button:hover {
+    background-color: var(--crema) !important;
+    color:var(--grigioScuro) !important;
+}
+
+
+.woocommerce-messageAddToCart{
+    width: 100%;
+}
+
+.woocommerce-messageAddToCart .woocommerce-message {
+    font-size: 14px;
+    font-family: "Raleway", serif;
+}
+
+.woocommerce-messageAddToCart .woocommerce-message .button{
+border: 1px solid var(--grigioScuro);
+}
+
+.mobile {
+    display: none;
+}
+
+.variations_form.cart{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+select#quantita {
+    padding: 2%;
+    border-radius: 0px;
+    color: var(--grigioScuro);
+}
+
+select {
+    padding: 2% !important;
+    border-radius: 0px !important;
+    color: var(--grigioScuro);
+}
+
+label {
+    font-size: 14px;
+    font-family: "Raleway", serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+/* button google pay per pagare già nella pagina del prodotto  */
+.wcpay-express-checkout-wrapper {
+    display:none;
+}
+

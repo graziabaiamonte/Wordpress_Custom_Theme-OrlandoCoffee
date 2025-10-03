@@ -1,0 +1,878 @@
+/*
+Theme Name: Orlando
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: orlando
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Orlando is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/* loader */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--grigioScuro);
+    z-index: 9999999999999999999999999999999999999999999999999999999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  /* Slide-out animation */
+#preloader.slide-out {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.8s ease-in, opacity 0.5s ease-in;
+  }
+  
+  /* Preloader default (no transform) */
+  #preloader {
+    transform: translateY(0);
+    transition: none;
+  }
+  
+  #preloader.preloader-hidden {
+    display: none !important;
+  }
+  
+  
+  .preloader-content {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    max-width: 150px;
+    margin-bottom: 50px;
+  }
+  
+  .progress-container {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background: var(--crema);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: var(--active);
+    transition: width 0.05s linear;
+  }
+  
+  .progress-text {
+    margin-top: 10px;
+    font-size: 18px;
+    color: var(--crema);
+  }
+
+
+  /* This rule will hide the preloader if the class is on the <html> tag */
+.preloader-initially-hidden #preloader {
+    display: none !important; 
+  }
+  
+  /* Ensure your default #preloader style makes it visible for the first load animation */
+  #preloader {
+    /* Your existing styles for the preloader, e.g.: */
+    display: flex; /* or block, or whatever its default visible state is */
+    /* position, background, z-index, etc. */
+  }
+  
+/* fine loader */
+  
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'Eugusto';
+    /* src: url('assets/fonts/Eugusto.woff') format('woff'); */
+    src: url('assets/fonts/orlando_new.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Naibo';
+  src: url('assets/fonts/Naibo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+ h2, p{
+  margin: 0;
+ }
+
+.primary {
+	font-family: 'Eugusto', sans-serif;
+	font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.secondary{
+  font-family: "Raleway", serif;
+  letter-spacing: 1px;
+}
+
+.fontLiquori{
+  font-family: 'Naibo', sans-serif;
+}
+
+
+/* Stile personalizzato per il focus */
+:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+
+.site{
+  width: 100%;
+}
+
+.site-main{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 5%; */
+  background-color: var(--crema);
+}
+
+:root {
+  --crema: #efebdc;  
+  --marroneLogo: #8B682E;
+  --grigioScuro: #3C3C3B;
+  --grigioChiaro: #E3E3E3;
+  --rosso: #AC003F;
+  --rosa: #B9A1A3; 
+  --biancoSfondo: #e3e3e389;
+  --arancioAmaro: #B95D32;
+  --active:#c4bda2;
+}
+
+
+body, html {
+    padding: 0;
+    margin: 0;
+    /* overflow-x: hidden; */
+    scrollbar-width: none;  
+    background-color: var(--crema);
+    }
+
+html {
+  --color: transparent;
+}
+
+body {
+  background: var(--color);
+}
+
+.section {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#header{
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  /* background-color: transparent; */
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(0); /* Visibile di default */
+}
+
+.boxLogo{
+  width: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.boxLogo svg {
+  fill: var(--grigioScuro);
+}
+
+.logoHeader{
+  object-fit: contain;
+  height: 120px !important;
+  width: auto;
+  animation: rotateIcon 33s linear infinite; 
+}
+
+
+.buttonContattaci {
+  background-color: transparent;
+  color: var(--grigioScuro) ;
+  border: 1px solid var(--grigioScuro);
+  padding-top: 7px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all 0.3s ease-in-out;
+  font-family: "Raleway", serif;
+	font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.buttonContattaci:hover {
+  background-color: var(--grigioScuro);
+  color: var(--crema);
+  cursor: pointer;
+}
+
+.buttonContattaci a {
+  color: var(--grigioScuro);
+}
+
+.buttonContattaci a:hover{
+  color: var(--crema);
+}
+
+.widthSame{
+  width: 200px;
+}
+
+.widthSameButton{
+  width: 200px;
+  display: flex;
+  justify-content: end;
+  margin-right: 1%;
+  gap:15px;
+  align-items: self-end;
+}
+
+.iconCartDesk {
+  width: 45px;
+  background-color: transparent;
+  position: relative;
+  border: none;
+}
+
+.iconCartDesk:hover {
+  cursor: pointer;
+}
+
+#cartIcon{
+  width: 44px;
+}
+
+@keyframes rotateIcon {
+  0% {
+      transform: rotate(0deg); /* Inizia da 0 gradi */
+  }
+  100% {
+      transform: rotate(360deg); /* Ruota fino a 360 gradi */
+  }
+}
+
+
+.iconCartSvg{
+  fill: transparent;
+  stroke: var(--grigioScuro);
+  stroke-width: 3px;
+  width: 35px;
+}
+
+
+.hamburgerMenu,  .iconCart{
+  width: 55px;
+}
+
+
+.hamburgerMenu{
+  border: none;
+  background-color: transparent;
+}
+
+.hamburgerMenu svg{
+  fill: var(--grigioScuro);
+  transition: all 0.3s ease-in-out;
+  width: 35px;
+}
+
+.hamburgerMenu svg:hover{
+  fill: var(--active);
+  /* transform: scale(1.2); */
+}
+
+.hamburgerMenu:hover {
+  cursor: pointer;
+}
+
+.svgLogo{
+  transition: all 0.3s ease-in-out;
+ 
+}
+
+.svgLogo:hover{
+  fill: var(--active);
+}
+.headerLight #menuiconid {
+    color : var(--crema) !important;
+}
+
+.headerLight .hamburgerMenu svg {
+  fill: var(--crema);
+}
+
+.headerLight .iconCart {
+  stroke: var(--crema);
+}
+
+.headerLight .iconCartDesk {
+  stroke: var(--crema);
+}
+
+.headerLight .iconCart:hover {
+  stroke: var(--active);
+  cursor: pointer;
+}
+
+.mobileIconCart {
+  display: none;
+}
+
+.headerLight .buttonContattaci {
+  background-color: var(--grigioScuro);
+  color: var(--crema);
+  border-color: var(--crema);
+  transition: all 0.3s ease-in-out;
+}
+
+.headerLight .svgLogo {
+  fill: var(--crema);
+  transition: all 0.3s ease-in-out;
+}
+
+.headerLight .iconCartSvg {
+  stroke: var(--crema);
+}
+
+.headerLight .iconCartSvg:hover{
+  stroke: var(--active);
+}
+
+.headerDark .iconCartSvg{
+  stroke: var(--grigioScuro);
+}
+
+.headerDark .iconCartSvg:hover{
+  stroke: var(--crema);
+}
+
+.headerLight .buttonContattaci:hover {
+  background-color: var(--crema);
+  color: var(--grigioScuro);
+  cursor: pointer;
+}
+
+.headerLight .buttonContattaci a {
+  color: var(--crema);
+}
+
+.headerLight .buttonContattaci:hover a {
+  color: var(--grigioScuro);
+}
+
+.headerDark .hamburgerMenu svg{
+  fill: var(--grigioScuro);
+  transition: all 0.3s ease-in-out;
+}
+
+.headerDark .iconCart {
+  stroke: var(--crema);
+}
+
+.headerDark .iconCartSvg {
+  stroke: var(--grigioScuro);
+}
+
+.headerDark .iconCartSvg:hover{
+ stroke: var(--active) !important;
+  cursor: pointer;
+}
+
+.headerDark .hamburgerMenu svg:hover{
+  fill: var(--active);
+  cursor: pointer;
+}
+
+.headerDark .buttonContattaci {
+  background-color: var(--grigioScuro);
+  color: var(--crema) !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.headerDark .buttonContattaci:hover {
+  background-color: var(--crema);
+  color: var(--grigioScuro) !important;
+  border-color: var(--grigioScuro);
+  cursor: pointer;
+}
+
+.headerDark .buttonContattaci a{
+  color: var(--crema);
+}
+
+.headerDark .buttonContattaci:hover a {
+  color: var(--grigioScuro);
+}
+
+
+/* Popup Styles */
+.popup {
+  position: fixed;
+  top: -130%; /* Hidden by default */
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--grigioScuro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: top 0.5s ease-in-out;
+  z-index: 9999999999 !important;
+}
+
+.popup.active {
+  top: 0; /* Slide down */
+  visibility: visible;
+}
+
+.popup.closing {
+  top: -100%; /* Slide up */
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--crema);
+  transition: transform 0.3s;
+}
+
+.close-btn:hover svg {
+  transform: rotate(90deg);
+}
+
+.popup-menu ul {
+  list-style: none;
+  text-align: center;
+}
+ 
+.popup-menu ul li a{
+ text-decoration: none;
+ color: var(--crema);
+ text-transform: uppercase;
+ font-size: 48px;
+ transition: all .3s ease-in-out;
+}
+
+.popup-menu ul li a:hover{
+  color: var(--active);
+ }
+
+.menuDestra{
+  display: flex;
+  align-items: start;
+  margin-right: 1%;
+}
+
+
+.whmc_ft-buttons-con a {
+    width: auto !important;
+    padding: 5px !important;
+    font-family: "Raleway", serif !important;
+}
+
+.whmc_ft-buttons-con a:hover {
+    color: var(--grigioScuro) !important;
+    background-color: var(--active) !important; 
+}
+
+
+.cart-item-data-field a {
+    font-family: "Raleway", serif !important;
+    text-transform: capitalize !important;
+}
+
+
+.whmc-item-price span {
+    font-family: "Raleway", serif !important;
+}
+
+#totalcla span {
+    font-family: "Raleway", serif !important;
+}
+
+.whmc-cart-subtotal-wrap {
+    font-family: "Raleway", serif !important;
+}
+
+
+
+/* CART POPUP */
+.iconCart{
+ border: none;
+ background-color: transparent;
+ position: relative;
+ fill: var(--grigioScuro);
+}
+
+.iconCart:hover {
+  cursor: pointer;
+}
+
+.badgeItemCart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 2% 5%;
+  font-size: 12px;
+  border-radius: 50px;
+  background-color: var(--grigioScuro);
+  color: var(--crema);
+  font-family: "Raleway", serif;
+  line-height: 1.2em;
+}
+
+.headerLight .badgeItemCart {
+  background-color: var(--crema);
+  color: var(--grigioScuro);
+}
+
+.headerDark .badgeItemCart {
+  background-color: var(--grigioScuro);
+  color: var(--crema);
+}
+
+.popupCart {
+  position: fixed;
+  right: -100%; /* Hidden by default */
+  width: 30%;
+  height: 100vh;
+  background: var(--crema);
+  border:1px solid var(--grigioScuro);
+  border-width: 0px 0px 0px 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: right 0.9s ease-in-out;
+  z-index: 9999999;
+  font-family: "Raleway", serif;
+  letter-spacing: 1px;
+  padding:2%;
+}
+
+.popupCart.active {
+  right: 0; 
+}
+
+.popupCart.closing {
+  right: -100%; 
+}
+
+.close-btnCart {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btnCart svg {
+  width: 32px;
+  height: 32px;
+  fill: var(--grigioScuro);
+  transition: transform 0.3s;
+}
+
+.close-btnCart:hover svg {
+  transform: rotate(90deg);
+}
+
+
+.woocommerce-placeholder.wp-post-image{
+  height: 50px;
+  width: 50px;
+}
+
+.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail{
+  height: 80px;
+  width: 80px;
+}
+
+
+.button.wc-forward {
+ color: var(--grigioScuro);
+ text-transform: uppercase;
+ padding-top: 10px;
+ padding-bottom: 10px;
+ transition: all 0.3s ease-in-out;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.button.wc-forward:hover{
+  background-color: var(--rosso);
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.button.checkout.wc-forward:hover{
+  background-color: var(--rosso);
+  color: var(--grigioChiaro);
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+.footerMain{
+  background-color: var(--grigioScuro);
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+  padding-top: 5%;
+  z-index: 7777746;
+  margin-bottom: -50px;
+}
+
+.logoFooter{
+  position: absolute;
+  bottom: -15%;
+  height: 60% !important;
+  width: 100vw !important;
+  object-fit: cover;
+}
+
+.testoFooter{
+  display: flex;
+  gap:30px;
+  width: 100%;
+  position: relative;
+  z-index: 33;
+}
+
+.testoFooter div {
+  width: 40%;
+  height: 100px;
+  padding-top: 2%;
+  padding-left: 2%;
+}
+
+.testoFooter p {
+  color: var(--crema);
+  font-size: 16px;
+}
+
+.menuFooterPrimary .titleMenu{
+  font-size:16px;
+}
+
+.menuFooterPrimary {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menuFooterPrimary a {
+  color: var(--crema) !important;
+}
+
+.menuFooterPrimary a:hover {
+  color: var(--active) !important;
+}
+
+.menuFooterPrimary .infoMenu{
+  font-size: 14px;
+}
+
+.credit {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.credit a {
+  color: var(--crema);
+  transition: color 0.2s ease-in-out;
+  font-weight: 500
+}
+
+.credit a:hover{
+  color: var(--active);
+}
+
+.credit .srl {
+  font-size: 16px;
+}
+
+.credit .adduma {
+  font-size: 14px;
+  width: 70%;
+}
+
+.menuFooter {
+  display: flex;
+  flex-direction: column;
+  gap:  5px;
+}
+.menuFooter a {
+  font-size: 14px;
+  color: var(--crema) !important;
+}
+
+.menuFooter a:hover {
+  color: var(--active) !important;
+}
+
+.boxSocial {
+  display: flex;
+  gap: 5px;
+  font-size: 14px;
+  justify-content: start;
+  padding: 0 !important;
+}
+
+.boxSocial p {
+  width: auto;
+}
+
+.entry-content{
+  min-height: 100vh;
+  display: flex;
+  width: 90vw;
+  justify-content: center;
+}
+
+.entry-header .entry-title{
+  font-family: 'Eugusto', sans-serif;
+	font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+ font-size: 3em;
+ color: var(--grigioScuro);
+}
+
+
+a[href="https://www.s-sols.com/products/wordpress/accelerator?utm_source=usersite&utm_medium=banner&utm_campaign=free_lim_ver&utm_term=accel"] {
+  z-index: -1 !important;
+}
+
+.fkcart-shortcode-icon-wrap svg{
+  stroke-width: 1 !important;
+}
+
+.whmc-cart-item-wrap {
+    background-color: var(--crema) !important;
+}
+
+.whmc-cart-items-inner {
+    background-color: transparent !important;
+    border-radius: 0px;
+    box-shadow: none ;
+}
+
+
+.footerNumber {
+    color: var(--crema);
+    display: flex;
+    flex-direction: row !important;
+    padding: 0 !important;
+}
+
+
+/* ------------ LANDING PAGE ---------------- */
+
+.landingMain {
+    height: 100vh;
+    width: 100vw;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    z-index: 99999999999999999999999999999999999999999999999999999;
+    display: flex;
+    flex-direction: column !important;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+    background: var(--crema);
+}
+
+.landingMain img {
+    height: 50%;
+   margin-left: -10%;
+    object-fit: contain;
+}
+
+/* ------------- FINE LANDING PAGE ---------- */
+
+
+
+
+
+
+
+
+
+
+.wp-block-woocommerce-cart.alignwide {
+    width:70% !important;
+}

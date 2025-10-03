@@ -1,0 +1,30 @@
+
+.mainBoxCookie {
+    background-color: var(--crema);
+    padding: 5%;
+    color: var(--grigioScuro);
+}
+
+.mainBoxCookie a {
+    color: black;
+}
+
+.mainBoxCookie p {
+    width: 100%;
+}
+
+.mainBoxCookie h1 {
+    width:  100%;
+}
+
+.mainTestoCookie {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sectionTestoCookie {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
