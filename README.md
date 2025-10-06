@@ -28,4 +28,7 @@ A custom WordPress theme developed for a client selling coffee and alcohol onlin
 
 - **Optimized performance**: asynchronous script loading, optimized images, and minimized JS/CSS bundles.
 
-![Screenshot Home](assets/xreadme/inner_page_global_warming.png)
+### Visita il sito [online](https://orlandocaffe.com)
+
+![Screenshot Home](assets/xreadme/orlando_inner.png)
+![Screenshot Inner](assets/xreadme/home_orlando.gif)
